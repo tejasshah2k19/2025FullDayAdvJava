@@ -1,0 +1,66 @@
+web project ->
+		file -> new -> dynamic web project -> 
+
+server add ->
+		file -> new -> server -> tomcat -> 
+		
+
+		
+how to add servlet-api.jar ?
+
+	project -> right click -> properties -> java build path -> tab -> click libraries -> [class path click] -> 
+		add external jars button -> browse path apache/lib/servlet-api.jar -> open -> 
+		tab -> click order and exports -> select all button click => apply and close  
+		
+
+Parent 
+	add(int a)
+	
+Child extends Parent
+	add(int a) -> method override 
+	add(int a,int b) -> method overloading 
+	
+	
+how to create servlet ?
+		1) class  extends HttpServlet
+		2) service() -> override   -->> logic 
+		3) @WebServlet ->  mapping -> server ?  		
+		
+where ?
+	java 
+		folders 
+	MVC - model view controller 
+		
+		Model : data { temp , db , file  }  
+		
+		View : html 
+		
+		Controller : servlet
+----------------------------------------------------------------------------------
+servlet-api.jar 
+servlet create 
+----------------------------------------------------------------------------------
+
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
