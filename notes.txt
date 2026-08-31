@@ -41,6 +41,32 @@ servlet-api.jar
 servlet create 
 ----------------------------------------------------------------------------------
 
+
+String -> Integer 
+
+	String n1Str = request.getParameter("n1"); 
+	int n1 = Integer.parseInt(n1Str);
+	
+	
+
+what is jsp ?
+jsp technology JEE -> view 
+
+java servlet page / java server page 
+
+
+why?
+HTML + Java  
+
+
+how?
+
+<% %>  scriptlet 
+
+<%= %> expression 
+
+<%!  %> declaration 
+
 		
 	
 		
