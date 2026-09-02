@@ -23,15 +23,24 @@ public class VoteServlet extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String voteStatus = "";
 		String error = "";
+		
+		String alphaRegEx = "[a-zA-Z]+";  //+ => min:1 , max:n * => min:0 max:n 
+		String digitRegEx = "[0-9]{4}"; //
 		boolean isError = false;
 		// validation
 		if (name == null || name.isBlank()) {
 			error = "Please Enter Name<br>";
 			isError = true;
+		}else if(name.matches(alphaRegEx)==false) {
+			error = "Please Enter Valid Name<br>";
+			isError = true;
 		}
 
 		if (birthYearStr == null || birthYearStr.isBlank()) {
 			error += "Please Enter BirthYear<br>";
+			isError = true;
+		}else if(birthYearStr.matches(digitRegEx)==false) {
+			error += "Please Enter Valid BirthYear<br>";
 			isError = true;
 		}
 
