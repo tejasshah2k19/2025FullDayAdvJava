@@ -75,7 +75,9 @@
         </div>
         <div class="reg-body">
             <form action="GirRegController" method="post">
-
+		
+				<span class="error">${error}</span>
+		
                 <div class="mb-3">
                     <label class="form-label">Name</label>
                     <input type="text" class="form-control" name="name" placeholder="Enter your full name"  value="${nameValue}"/>

@@ -102,8 +102,16 @@
                 </tr>
             </table>
 
+			<h2>Total Participants : ${count}</h2>
+
+
             <a href="GirReg.jsp" class="btn btn-devotion">Register Another</a>
         </div>
+    
+    	<div>
+    	
+    		${users}  
+    	</div>
     </div>
 </div>
 

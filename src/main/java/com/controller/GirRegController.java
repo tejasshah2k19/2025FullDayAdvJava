@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,11 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.bean.UserBean;
 import com.util.Validators;
 
 @WebServlet("/GirRegController")
 public class GirRegController extends HttpServlet {
 
+	int count =0; 
+		//array 
+		ArrayList<UserBean> users = new ArrayList<>();
+ 		
+	
 	public void service(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException {
 		
 		//read 
@@ -21,7 +28,6 @@ public class GirRegController extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String city = request.getParameter("city");
 		String contact = request.getParameter("contact");
-		
 		
 		boolean isError = false; 
 		//validation
@@ -54,7 +60,13 @@ public class GirRegController extends HttpServlet {
 			request.setAttribute("contactError", "Please Enter Contact Detail");
 		}else {
 			request.setAttribute("contactValue", contact);
+//			if(contacts.contains(contact)) {
+//				isError  = true; 
+//				request.setAttribute("error", "Mobile number already registered");
+//			}
 		}
+		
+		
 		
 		if(isError) {
 			//fail 
@@ -62,6 +74,21 @@ public class GirRegController extends HttpServlet {
 			rd.forward(request, response);
 		}else {
 			//success
+			count++;
+
+			UserBean userBean = new UserBean();
+			userBean.setName(name);
+			userBean.setCity(city);
+			userBean.setContact(contact);
+			userBean.setGender(gender);
+			
+			users.add(userBean);
+
+			
+
+			request.setAttribute("count", count);
+			request.setAttribute("users", users);
+
 
 			RequestDispatcher rd = request.getRequestDispatcher("GirSuccess.jsp");
 			rd.forward(request, response);
