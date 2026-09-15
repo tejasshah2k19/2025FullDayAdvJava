@@ -67,19 +67,93 @@ how?
 
 <%!  %> declaration 
 
+-------------------------------------------------------------------
+jar / lib / dependency 
+	servlet-api.jar 
 		
+		
+Servlet : interface 		
+GenericServlet : class 		
+HttpServlet : class 
+LoginServlet : class 		
+		
+
+web server :- apache tomcat 
+
+
+LoginServlet ---> method? 		
+service 
+public void service(HttpServletRequest request , HttpServletResponse response )
+
+
+servlet life cycle --> 
+1st request =========LoginServlet=========> LoginServlet object create 
+2nd,3rd,....nth request ===> LoginServlet===>LoginServlet ==> already created ? single time
+											thread			   
+singleton design pattern ?
+
+----------------------------------------------------------------------------------
+		
+protected void service(HttpServletRequest req, HttpServletResponse resp)
+        throws ServletException, IOException
+   
+public abstract void service(ServletRequest req, ServletResponse res)
+	throws ServletException, IOException;
+
+public void service(ServletRequest req, ServletResponse res)
+	throws ServletException, IOException;
+	   
+   		
+   		
+form : get   :=> controller -> doGet 
+form : post  :=> controller -> doPost 
+
+
+form : get or post => controller -> service 
 	
+	
+servlet -> service , doGet , doPost 
+? service 
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+-----------------------------------------------------------------------
+
+InputCity.jsp 
+	form: method post
+	 
+	CityName : [ Ahmedabad ] 
+				submit [post] 
+	
+CityController
+		doPost 
+			read city 
+			ArrayList -> add city
+			redirect -> InputCity.jsp [ with success message ] 
+			 
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 		
 		

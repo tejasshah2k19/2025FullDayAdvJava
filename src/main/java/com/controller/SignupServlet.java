@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/SignupServlet")
 public class SignupServlet extends HttpServlet{
 
-
+	//doPost 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("SignupServlet::service()");
 		
