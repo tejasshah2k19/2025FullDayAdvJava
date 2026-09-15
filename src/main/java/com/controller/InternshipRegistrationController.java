@@ -10,13 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.bean.StudentBean;
+
 @WebServlet("/InternshipRegistrationController")
 public class InternshipRegistrationController extends HttpServlet {
 
 	// doGet
 	// doPost
 	
-	ArrayList<String> list = new ArrayList<String>();
+	ArrayList<StudentBean> list = new ArrayList<StudentBean>();
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// read
@@ -52,7 +54,13 @@ public class InternshipRegistrationController extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("InternshipReg.jsp");
 			rd.forward(request, response);
 		}else {
-			list.add(name);//add 
+			StudentBean bean = new StudentBean();
+			bean.setName(name);
+			bean.setEmail(email);
+			bean.setCollegeName(collegeName);
+			bean.setTechonology(technology);
+			
+			list.add(bean);
 			
 			request.setAttribute("list", list);
 			//success jsp 
