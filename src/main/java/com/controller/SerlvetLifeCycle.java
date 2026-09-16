@@ -23,17 +23,18 @@ public class SerlvetLifeCycle extends HttpServlet{
 	public void init() {
 		System.out.println("init() : ServletLifeCycle");
 	}
+	
 	//all time 
-//	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println("service() : ServletLifeCycle");
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("service() : ServletLifeCycle");
+	}
+	
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //	}
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-	
+//	
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//	}
+//	
 	
 	
 	

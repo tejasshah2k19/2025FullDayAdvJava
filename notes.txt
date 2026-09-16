@@ -133,8 +133,13 @@ CityController
 
 -----------------------------------------------------------------------
 
-
-
+Filter -> 
+	1) class implements Filter { javax.servlet } 
+	2) override methods 
+			init()
+			doFilter() : logic 
+			destroy()
+	3) @WebFilter("/ServletUrl")
 
 
 
