@@ -74,7 +74,7 @@
             <p>Devotional &amp; Spiritual Activity Sign-up</p>
         </div>
         <div class="reg-body">
-            <form action="GirRegController" method="post">
+            <form action="girnar-registration" method="post">
 		
 				<span class="error">${error}</span>
 		

@@ -142,6 +142,61 @@ Filter ->
 	3) @WebFilter("/ServletUrl")
 
 
+-------------------------------------------------------------------
+
+	user will use Login.jsp 
+	
+		Login.jsp input { email and password } 
+		on submit of Login.jsp -> request -> LoginServlet 
+		
+		LoginServlet will check email and password 
+				if email is admin@gmail.com
+				and 
+				password is admin then login success and redirect to UserHome.jsp 
+				
+				if credentials are not valid then redirect to Login.jsp with error msg. 
+				
+	
+	Now on UserHome.jsp we have two hyperlink 
+				1) open Girnar Registration .jsp 
+				2) List all Girnar Registered Users 
+				
+				
+	User filter for validation for LoginServlet and GirnarRegisterationServlet 
+	
+----------------------------------------------------------------------------------			 
+
+
+AFilter implements Filter 
+BFilter 
+CFilter 
+
+
+ABCController extends HttpServlet 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bean.UserBean;
 import com.util.Validators;
 
-@WebServlet("/GirRegController")
+@WebServlet("/girnar-registration")
 public class GirRegController extends HttpServlet {
 
 	int count = 0;
