@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>AmazonWishList</h1>
+
 <a href="AmazonCart.jsp">Cart</a><br>
 
 
