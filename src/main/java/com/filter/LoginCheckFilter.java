@@ -12,7 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter("/AmazonWishList.jsp")
+@WebFilter(value = {"AmazonWishList.jsp","AmazonCart.jsp","AmazonOrder.jsp"})
 public class LoginCheckFilter implements Filter {
 
 	@Override

@@ -175,6 +175,34 @@ CFilter
 ABCController extends HttpServlet 
 
 
+--------------------------------------------------------
+cookie ---> store 
+
+client -- user --- browser 
+
+X security privacy 
+
+
+Cookie -> class 
+response.addCookie(c);
+c.setMaxAge(seconds)   // expired date 
+
+Cookie arr[] = request.getCookies();
+
+
+	Amazon 
+
+1)	Signup 
+2)	Login  {email , password } server validate -> cookie -> loggedIn Yes 
+
+1)	WishList  -> logged in? cookie -> loggedIn : 
+2)	Cart 	  -> 	
+3)	Order     -> 
+50 jsp -> 50 
+
+Filter -> loggedIn 
+	WishList 
+	
 
 
 
