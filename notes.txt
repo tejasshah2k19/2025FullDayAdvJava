@@ -207,15 +207,59 @@ Filter -> loggedIn
 
 
 
+----------------------------------
+Reusable Web Component
+ 
+inclusion ===> 
+
+	Nav.jsp 
+		[        Faq ] 
+		
+	Cart.jsp 
+			include Nav.jsp 
+	
+	 Order 
+	 		include Nav.jsp
+	 
+	 Wishlist 
+	 		include Nav.jsp 
+	
+1) static inclusion 
+	<%@ include file="Nav.jsp" %>
+2) dynamic inclusion 
+	<jsp:include page="Nav.jsp" />
+
+
+
+
+
+		<jsp:include page="Nav.jsp" />
+
+
+<% %>  => scriptlet 
+
+<%= %> => expression 
+
+<%!  %>  => declaration 
+
+EL -> ${ } 
+
+<%@  %> => Directives 
 
 
 
 
 
 
-
-
-
+		AmazonCart.jsp / AmazonOrder.jsp / AmazonWishList.jsp 
+		
+		<jsp:include page="Nav.jsp"/>
+		
+		XXX XXX XXX 
+		XX XX XX XX XXX 
+		
+		<%@include file="AmazonFooter.jsp" %> 
+		
 
 
 

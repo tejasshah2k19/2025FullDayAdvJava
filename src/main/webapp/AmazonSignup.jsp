@@ -1,14 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>AmazonSignup</h1>
-<a href="AmazonLogin.jsp">Signup</a>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon Signup</title>
 
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container">
+	<div class="row justify-content-center align-items-center min-vh-100">
+		<div class="col-11 col-sm-8 col-md-6 col-lg-4">
+
+			<div class="card shadow-sm">
+				<div class="card-body p-4 text-center">
+
+					<h2 class="card-title mb-4">Amazon Signup</h2>
+
+					<div class="mt-3">
+						<span>Already have an account?</span>
+						<a href="AmazonLogin.jsp">Login</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Bootstrap 5 JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
