@@ -259,12 +259,165 @@ EL -> ${ }
 		XX XX XX XX XXX 
 		
 		<%@include file="AmazonFooter.jsp" %> 
+--------------------------------------------------------------------
+
+web app -> data ---> database 
+
+	Signup ----> insert ---> db 
+	Login -----> select ----> db 
+	AddToCart --> insert ---> db 
+	MyCart --> ? 
+	
 		
 
 
+jdbc  --> api .jar .class
+
+website----> sql sb -> connection --> execute query
+
+
+web ---> db ====> connection 
+
+database?
+	oracle
+	ms-sql
+	mysql 
+	PG 
+
+SQL : Oracle 
+
+Java --> Oracle 
+AdvJava ---> MySQL 
+Spring  ---> PG / NoSQL
+Node --> NoSQL 
 
 
 
+create database 25fullday;
+
+use 25fullday;
+
+
+
+
+how to link mysql-connector.jar ?
+
+	project -> right click -> properties -> java build path -> tab -> click libraries ->
+	 [class path click] -> 
+		add   jars button -> browse path your project/lib/mysql-XXXX-.jar -> open -> 
+		tab -> click order and exports -> select all button click => apply and close 
+		
+---------------------------------------------------------
+
+user information 
+		
+	cookie --> client side -> browser
+	
+	security 
+	privacy  
+	
+	session --> server side -> server memory  
+	otp , password , credit card -> temp 
+		
+	Cookie c = new Cookie("name","ram");
+	response.addCookie(c); 
+	
+	session ==> created by ==> server
+	
+	getSession(); 
+	request.getSession( ) ; 
+	
+	HttpSession session = request.getSession();
+	session.setAttribute("name","ram"); 
+	
+	String name = (String) session.getAttribute("name");
+	
+-------------------------------------------------------
+	
+	when we release session ? 
+	memory --> free ? 
+	logout ---> session free destroy 
+
+	 
+	session.invalidate();
+		
+		
+	
+	idle-> 4 min -> 
+	
+	session time out -> setMaxInactiveInterval
+	
+-------------------------------------------------------
+
+listener 
+filter security 
+inclusion 
+servlet config 
+jstl 
+
+-------------------------------------------------------
+login ->session userId , role 
+
+ecom-> jsp servlet -> filter ->check login role 
+
+-------------------------------------------------------
+/** 
+		login signup -> no need to check for login 
+		
+		public ---> no login 
+		private ---> login 
+		
+		authorization
+			after login what you can access?
+			
+			user login -> admin page -> access denied 
+			
+		
+
+-------------------------------------------------------
+listener --> listen --> events 
+
+session creation --> event ---> count++
+session destroy --> event ---> count-- 
+
+
+server start ---> admin mail ---> online 
+server stop ----> admin mail ---> offline 
+
+exception --> mail 
+
+HttpSessionListener --> sessionCreated , sessionDestroyed 
+
+
+
+<b>
+<i>
+
+
+tags --> JSTL
+				core 
+				fmt 
+				string function
+				xml 
+				
+		 
+
+JSTL ---> 
+		jar
+		
+		jsp: import taglib
+		
+		use c:set c:out 
+		
+<%@page import="" %>
+
+<%@taglib uri="" prefix="c" %>
+
+<c:table> 
+<table>
+	
+		
+	
 
 
 
